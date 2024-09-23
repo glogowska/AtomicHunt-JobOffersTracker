@@ -1,0 +1,78 @@
+<mat-toolbar>
+  <div *ngIf="isLoggedIn" class="logo-div">
+    <button class=" circle-button logo">
+      <span>
+      <strong>AtomicHunt</strong>
+    </span>
+  </button>
+  </div>
+  
+    <button *ngIf="!isLoggedIn" class=" circle-button logo">
+      <span>
+      <strong>AtomicHunt</strong>
+    </span>
+  </button>
+  
+  <button *ngIf="isLoggedIn" class="circle-button sidenav-button" (click)="toggleSidenav()">
+    <span>
+      <strong>REMINDER</strong>
+    </span>
+  </button>
+
+  <div *ngIf="isLoggedIn" class="status-view-div" >
+    <button *ngIf="isLoggedIn" class="central-buttons circle-button status-view-button" (click)="changeViewToStatus()">
+      <span>
+      <strong>STATUS VIEW</strong>
+    </span>
+  </button>
+  </div>
+
+  <div *ngIf="isLoggedIn" class="calendar-div">
+    <button *ngIf="isLoggedIn" class="central-buttons circle-button calendar-view-button" (click)="changeViewToCalendar()">
+      <span>
+        <strong>CALENDAR VIEW</strong>
+      </span>
+    </button>
+  </div>
+
+  <div *ngIf="isLoggedIn" class="tag-view-div">
+    <button *ngIf="isLoggedIn" class="central-buttons circle-button tag-view-button" (click)="changeViewToTag()">
+      <span>
+      <strong>TAG VIEW</strong>
+    </span>
+  </button>
+  </div>
+
+  <div class="tools-div">
+    <button *ngIf="isLoggedIn" class="central-buttons circle-button tools-button">
+      <span>
+        <strong>TOOLS</strong>
+      </span>
+    </button>
+  </div>
+
+  <div class="logout-div">
+    <button *ngIf="isLoggedIn" class="circle-button log-out-button" (click)="logOut()">
+      <span>
+        <strong>LOG OUT</strong>
+      </span>
+    </button>
+  </div>
+
+  <div *ngIf="!isLoggedIn" class="login-div">
+    <button *ngIf="!isLoggedIn" class="circle-button log-in-button" (click)="logInRedirect()">
+      <span>
+        <strong>LOG IN</strong>
+      </span>
+    </button>
+  </div>
+
+  <div class="register-div">
+    <button *ngIf="!isLoggedIn" class="circle-button register-button" (click)="registerRedirect()">
+      <span>
+        <strong>REGISTER</strong>
+      </span>
+    </button>
+  </div>
+
+</mat-toolbar>

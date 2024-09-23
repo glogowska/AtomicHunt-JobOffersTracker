@@ -1,0 +1,61 @@
+
+<div class="calendar-board">
+    <div class="calendar">
+        <div class="calendar-headline">
+            <div class="calendar-headline-month">
+              <button class="calendar-button" (click)="goToPreviousMonth()"><strong><<</strong></button>
+                {{firstDayOfActiveMonth().monthLong | uppercase}}
+                {{firstDayOfActiveMonth().year}}
+              <button class="calendar-button" (click)="goToNextMonth()"><strong>>></strong></button>
+            </div>
+            <div class="calendar-headline-controls">
+                <button class="today-button" (click)="goToToday()">CURRENT MONTH</button>
+                <mat-form-field>
+                    <mat-label>Month and Year</mat-label>
+                    <input matInput [matDatepicker]="dp" [formControl]="date">
+                    <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp
+                                    startView="multi-year"
+                                    (monthSelected)="setMonthAndYear($event, dp)"
+                                    panelClass="example-month-picker">
+                    </mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="calendar-grid">
+          <div *ngFor="let dayOfMonth of daysOfMonth(); let i = index" 
+               [ngClass]="{
+                 'calendar-grid-cell': true, 
+                 'calendar-grid-cell-active': activeDay()?.toISODate() === dayOfMonth.toISODate(),
+                 'calendar-grid-cell-inactive': dayOfMonth.month !== firstDayOfActiveMonth().month,
+                 'calendar-grid-cell-meeting': hasMeetings(dayOfMonth)
+               }" 
+               (click)="activeDay.set(dayOfMonth)">
+            {{ dayOfMonth.day }}
+          </div>
+        </div>
+        <div class="schedule">
+            <div class="schedule-headline">
+              <div *ngIf="activeDay()">
+                {{ activeDay()?.toLocaleString(DATE_MED) }}
+                <button class="calendar-button" (click)="openDatesCalendar(activeDay()?.toLocaleString(DATE_MED))">
+                  <strong>
+                    +
+                  </strong>
+                </button>
+              </div>
+            </div>
+            <div *ngIf="activeDay() && activeDayDates().length === 0">
+              <div>No planned Meetings today</div>
+            </div>
+            <div *ngIf="activeDay() && activeDayDates().length > 0">
+                <div *ngFor="let event of activeDayDates(); let i = index">
+                  {{ event.description }}
+                  <button class="details-button" (click)="openJobOfferDetails(event.jobOfferId)">
+                    <span><strong>DETAILS</strong></span>
+                  </button>
+                </div>
+              </div>
+          </div>
+    </div>
+</div>

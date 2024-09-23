@@ -1,0 +1,126 @@
+.register-board{
+    position: absolute;
+    justify-content: space-between;
+    width: 50%;
+    height: 90%;
+    background-color: #F8F8F8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+      
+}
+
+.submit-button {
+    justify-content: center;
+    padding: 10px;
+    margin: 6px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 20px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 15px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+  
+  .submit-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .submit-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .submit-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  .title-register {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.row label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.validation-text {
+    color: red;
+    font-size: 12px;
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-here {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.login-here:hover {
+    text-decoration: none;
+}
+
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,87 @@
+
+<div class="dialog-box">
+    <div mat-dialog-title>
+      Job Offer Form
+    </div>
+    <form [formGroup]="jobForm">
+      <div mat-dialog-content>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option *ngFor="let val of statuses" [value]="val">{{ val }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Position</mat-label>
+            <input matInput formControlName="position">
+          </mat-form-field>
+        </div>
+  
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Location</mat-label>
+            <input matInput type="text" formControlName="location">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Company Name</mat-label>
+            <input matInput type="text" formControlName="companyName">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Working Mode</mat-label>
+            <mat-select formControlName="mode">
+              <mat-option *ngFor="let value of modes" [value]="value">{{ value }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- <button mat-raised-button class="forms-button manage-button" type="button">Manage Dates</button> -->
+        </div>
+  
+        <div class="row">
+          <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Job Description</mat-label>
+            <input matInput type="text" formControlName="jobDescription">
+          </mat-form-field>
+        </div>
+  
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput type="email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Contact Information</mat-label>
+            <input matInput type="text" formControlName="contactInfo">
+          </mat-form-field>
+        </div>
+  
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Salary</mat-label>
+            <input matInput type="text" formControlName="salary">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Job Offer URL</mat-label>
+            <input matInput type="url" formControlName="url">
+          </mat-form-field>
+        </div>
+  
+        <div class="row">
+          <mat-form-field class="custom-field" appearance="outline" class="custom-input">
+            <mat-label>Custom Notes</mat-label>
+            <input matInput type="text" formControlName="customNotes">
+          </mat-form-field>
+        </div>
+    </div>
+    
+  
+    <div mat-dialog-actions class="buttons-div">
+      
+      <button mat-raised-button class="forms-button" type="button" (click)="onCancel()">Cancel</button>
+      <button mat-raised-button class="forms-button" type="button" (click)="onFormSubmit()">Save</button>
+    </div>
+  </form>
+  </div>
+  

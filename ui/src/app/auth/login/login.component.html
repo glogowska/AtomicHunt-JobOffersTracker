@@ -1,0 +1,23 @@
+<div class="login-board">
+    <div class="title-login">
+        LOGIN
+    </div>
+    <div class="forms">
+        <form [formGroup]="loginForm">
+            <div class="row">
+                <label>E-mail:</label>
+                <input type="email" placeholder="E-mail" formControlName="email">
+            </div>
+            <div class="row">
+                <label>Password:</label>
+                <input type="password" placeholder="Password" formControlName="password">
+            </div>
+            <div class="submit-button-container">
+                <button type="submit" class="submit-button" (click)="onSubmit()">Submit</button>
+            </div>
+            <div class="register-redirect">
+                <span>New to AtomicHunt? </span> <a class="register-here" (click)="redirectToRegister()">Register Here</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+.dialog-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+    min-height: 250px;
+    overflow: auto;
+  }
+
+  .title{
+    text-align: center;
+    padding-top: none;
+    font-size: 18px;
+  }
+
+  .dialog-container p {
+    color: black;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .dialog-container .p-title {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: rgb(73, 72, 72);
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .p-dates p {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .date-row{
+    display: flex;
+  }
+  .circle-button {
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 20px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #DF6449;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 11px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+    
+  }
+  
+  .circle-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .circle-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .circle-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  .circle-button-check {
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 30px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 11px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+    
+  }
+  
+  .circle-button-check:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .circle-button-check:hover {
+    transform: translateY(-2px);
+  }
+  
+  .circle-button-check:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  .input-date{
+    align-items: center;
+    padding-left: 50px;
+  }
+
+  .forms{
+    display: flex;
+    padding: 10px;
+  }
+
+  .form-title{
+    font-family: "JetBrains Mono",monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+  }
+
+  .button-close{
+    float: right;
+  }

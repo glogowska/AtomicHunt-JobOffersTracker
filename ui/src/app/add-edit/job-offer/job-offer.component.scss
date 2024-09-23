@@ -1,0 +1,60 @@
+.dialog-box{
+    width:auto;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.row{
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    gap:10px;
+}
+
+.forms-button{
+    margin: 8px;
+
+}
+
+.dialog-box:h1{
+    padding-top: 10px;
+}
+
+.buttons-div{
+  justify-content: center;
+}
+
+.custom-input{
+    width: 435px;
+    height: 100px;
+  
+    .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+    }
+  
+    .mat-form-field-flex {
+      height: 100%;
+      align-items: center;
+    }
+  
+    .mat-form-field-infix {
+      padding: 0 0 0 5px;
+    }
+  
+    .mat-input-element {
+      height: 100%;
+      padding: 5px 0;
+    }
+    textarea.mat-input-element {
+        resize: none;
+        height: 100%;
+      }
+  }
+
+  .manage-button{
+    padding-left: 20px;
+    margin-left: 40px;
+  }

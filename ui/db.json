@@ -1,0 +1,118 @@
+{
+  "joboffers": [
+    {
+      "status": "Offered",
+      "position": "Media Creator",
+      "location": "Vienna",
+      "companyName": "Google",
+      "mode": "On-Site",
+      "jobDescription": "x saa d",
+      "email": "email.email@gmail.com",
+      "contactInfo": "Jane Doe - +48 123 456 789",
+      "salary": "9k zł",
+      "dates": {
+        "2024-07-08": [
+          "Second Interview Google"
+        ],
+        "2024-08-05": [
+          "new meetingg"
+        ],
+        "": [
+          ""
+        ]
+      },
+      "url": "",
+      "customNotes": "-",
+      "id": 9
+    },
+    {
+      "status": "Applied",
+      "position": "Python Senior Develeoper",
+      "location": "Gdańsk",
+      "companyName": "Amazon",
+      "mode": "Unknown",
+      "jobDescription": "-",
+      "email": "amazonki@amazon.com",
+      "contactInfo": "mrs Anna Hopkins",
+      "salary": "10k",
+      "dates": {
+        "2024-07-04": [
+          "sorted"
+        ],
+        "2024-07-05": [
+          "Technical Interview Amazon"
+        ],
+        "2024-07-08": [
+          "First Interview Amazon",
+          "new event amazon"
+        ],
+        "2024-07-09": [
+          "new interview Amazon"
+        ]
+      },
+      "url": "amazon.com",
+      "customNotes": "custom notes custom notescustom notes custom notescustom notes custom notescustom notes custom notescustom notes custom notescustom notes custom notescustom notes custom notescustom notes custom notes",
+      "id": 10
+    },
+    {
+      "status": "Interested",
+      "position": "Angular Mid Developer",
+      "location": "Wrocław",
+      "companyName": "ING Bank",
+      "mode": "On-Site",
+      "jobDescription": "-",
+      "email": "inginging@ing.com",
+      "contactInfo": "Aneta Kowalska +48 665 401 503",
+      "salary": "9k zł",
+      "dates": {
+        "2024-07-05": [
+          "meeting des"
+        ]
+      },
+      "url": "inginging-oferty.com",
+      "customNotes": "CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES CUSTOM NOTES ",
+      "id": 11
+    },
+    {
+      "status": "Interviewed",
+      "position": "React Developer",
+      "location": "New York",
+      "companyName": "Hippo",
+      "mode": "Remote",
+      "jobDescription": "JobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescription JobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescriptionJobDescription JobDescriptionJobDescriptionJobDescription",
+      "email": "hr.hippo@hippo.com",
+      "contactInfo": "William Smith 3339303203",
+      "salary": "7k $",
+      "dates": {
+        "2024-07-08": [
+          "15.30 First Interview Hippo"
+        ]
+      },
+      "url": "hippo-hr.com",
+      "customNotes": "CNCNCNCNCNCNCNNCNCNCNCNCNCNNCNCNCNCNNCNCNCNCNCNCNCNCNCNNCNCNCNCNCNNC",
+      "id": 12
+    },
+    {
+      "status": "Applied",
+      "position": "DevOps",
+      "location": "San Escobar",
+      "companyName": "Avon",
+      "mode": "Hybrid",
+      "jobDescription": "JobDescriptionJobDescriptionJobDescription",
+      "email": "avon@gmail.com",
+      "contactInfo": "+48 503 405 607",
+      "salary": "5k zł",
+      "dates": {
+        "2024-07-31": [
+          "descr"
+        ]
+      },
+      "url": "avon.com/san-escobar",
+      "customNotes": "customnotescustomnotescustomnotes",
+      "id": 13
+    }
+  ],
+  "todo": {
+    "tasks": []
+  }
+}

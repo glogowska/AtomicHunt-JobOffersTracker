@@ -1,0 +1,63 @@
+
+.page-container {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  height: 91.68%;
+  width: 100%;
+  overflow: hidden;
+  //background-image: url('./background.jpg');
+}
+
+.drawer-div {
+  background-color: pink;
+  width: 200px;
+  //transition: transform 0.4s ease;
+
+}
+
+.status-view-div {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.tag-list-div{
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-view-div{
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.outlet-container{
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+

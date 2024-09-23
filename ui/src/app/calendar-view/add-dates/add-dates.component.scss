@@ -1,0 +1,112 @@
+.dialog-container {
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+    min-height: 250px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  }
+
+  .title{
+    text-align: center;
+    padding-top: none;
+    font-size: 18px;
+    font-family: "JetBrains Mono",monospace;
+  }
+
+  .custom-input{
+    width: 435px;
+    height: 60px;
+    justify-content: center;
+  
+    .mat-form-field-wrapper {
+      padding-bottom: 0 !important;
+    }
+  
+    .mat-form-field-flex {
+      height: 100%;
+      align-items: center;
+    }
+  
+    .mat-form-field-infix {
+      padding: 0 0 0 5px;
+    }
+  
+    .mat-input-element {
+      height: 100%;
+      padding: 5px 0;
+    }
+    textarea.mat-input-element {
+        resize: none;
+        height: 100%;
+      }
+
+  }
+
+  .manage-button{
+    padding-left: 20px;
+    margin-left: 40px;
+  }
+
+  .event-des-div{
+    margin-top:10px;
+    padding:10px;
+  }
+
+  .select-job-offer-div{
+    padding:10px;
+    justify-content: center;
+  }
+
+  .save-button {
+    padding: 20px;
+    margin-left: 12px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 20px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 20px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .save-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .save-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .save-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+  

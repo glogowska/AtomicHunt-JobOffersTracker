@@ -1,0 +1,194 @@
+
+
+<div class="table-board">
+
+      <div class="buttons-and-search">
+        <mat-form-field>
+          <mat-label>Search</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+        </mat-form-field>
+        <div class="table-buttons">
+          <button class="add-offer-table-button" (click)="openAddEditJobOfferForm()">
+            <span><strong>+</strong></span>
+           </button>
+     
+           <button class="filter-columns-table-button" (click)="onFilter()">
+             <span><strong>FILTER</strong></span>
+           </button>
+        </div>
+      </div>
+      
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" 
+        matSort 
+        cdkDropList
+        cdkDropListOrientation="horizontal"
+        (cdkDropListDropped)="drop($event)">
+      
+          <ng-container matColumnDef="status">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>STATUS</strong></th>
+            <td mat-cell *matCellDef="let row"> {{row.status}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="position">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>POSITION</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.position}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="location">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>LOCATION</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.location}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="companyName" *ngIf="companyNameColumn">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>COMPANY NAME</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.companyName}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="mode" *ngIf="modeColumn">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>WORKING MODE</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.mode}} </td>
+          </ng-container>
+
+          <!-- <ng-container matColumnDef="jobDescription">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Job Description </th>
+            <td mat-cell *matCellDef="let row"> {{row.jobDescription}} </td>
+          </ng-container> -->
+
+          <ng-container matColumnDef="email">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>E-MAIL</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="contactInfo">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>CONTACT INFORMATION</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.contactInfo}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="salary">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>SALARY</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.salary}} </td>
+          </ng-container>
+      
+          <!-- <ng-container matColumnDef="dates">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>DATES</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.dates}} </td>
+          </ng-container> -->
+
+          <!-- <ng-container matColumnDef="url">
+            <th mat-header-cell cdkDrag *matHeaderCellDef mat-sort-header> <strong>OFFER URL</strong> </th>
+            <td mat-cell *matCellDef="let row"> {{row.url}} </td>
+          </ng-container> -->
+
+          <!-- <ng-container matColumnDef="customNotes">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Custom Notes </th>
+            <td mat-cell *matCellDef="let row"> {{row.customNotes}} </td>
+          </ng-container> -->
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let row" class="action-cell"> 
+            <button class="circle-button details-button" (click)="openJobOfferDetails(row)">
+              <span><strong>DETAILS</strong></span>
+            </button>
+            <!-- <button class="circle-button edit-button" (click)="editJobOffer(row)">
+              <span><strong>EDIT</strong></span>
+            </button> -->
+            <!-- <button class="circle-button delete-button" (click)="deleteJobOffer(row.id)">
+              <span><strong>DELETE</strong></span>
+            </button> -->
+          </td>
+          </ng-container>
+      
+      
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+</div>
+
+<div class="overlay" *ngIf="filterVisible">
+  <div class="filter-div">
+    <div mat-dialog-title class="filter-header">
+      <strong>Filter The Columns</strong>
+    </div>
+    <div mat-dialog-content class="filtering-box">
+      <!-- <div class="filter-row"> -->
+        <input
+          type="checkbox"
+          [(ngModel)]="statusColumn"
+          (change)="removeColumns()"
+        />
+        Status
+        <input
+          type="checkbox"
+          [(ngModel)]="positionColumn"
+          (change)="removeColumns()"
+        />
+        Position
+      <!-- </div>
+      <div class="filter-row"> -->
+        <input
+          type="checkbox"
+          [(ngModel)]="locationColumn"
+          (change)="removeColumns()"
+        />
+        Location
+        <input
+          type="checkbox"
+          [(ngModel)]="companyNameColumn"
+          (change)="removeColumns()"
+        />
+        Company Name
+        <input
+          type="checkbox"
+          [(ngModel)]="modeColumn"
+          (change)="removeColumns()"
+        />
+        Working Mode 
+        <input
+          type="checkbox"
+          [(ngModel)]="emailColumn"
+          (change)="removeColumns()"
+        />
+        Email
+
+        <input
+          type="checkbox"
+          [(ngModel)]="contactInfoColumn"
+          (change)="removeColumns()"
+        />
+        Contact Information
+      <!-- </div>
+      <div class="filter-row"> -->
+        <input
+          type="checkbox"
+          [(ngModel)]="salaryColumn"
+          (change)="removeColumns()"
+        />
+        Salary
+        <!-- <input
+          type="checkbox"
+          [(ngModel)]="datesColumn"
+          (change)="removeColumns()"
+        />
+        Dates -->
+        <!-- <input
+          type="checkbox"
+          [(ngModel)]="urlColumn"
+          (change)="removeColumns()"
+        />
+        URL -->
+      <!-- </div> -->
+      <button class="circle-button" (click)="onCloseFilter()"> <strong>✓</strong> </button>
+    </div>
+  </div>
+</div>

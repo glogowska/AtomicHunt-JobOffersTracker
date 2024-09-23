@@ -1,0 +1,24 @@
+<div class="dialog-container">
+  <div mat-dialog-title class="title">
+    <strong>ADD EVENT ON {{ convertDate() }}:</strong>
+  </div>
+  <div mat-dialog-content>
+    <form [formGroup]="datesForm">
+      <div class="event-des-div">
+        <mat-form-field appearance="outline" class="custom-input">
+          <mat-label>Event Description</mat-label>
+          <input matInput formControlName="event">
+        </mat-form-field>
+      </div>
+      <div class="select-job-offer-div">
+        <mat-form-field appearance="outline" class="custom-input">
+          <mat-label>Select Job Offer</mat-label>
+          <mat-select formControlName="jobOfferId">
+            <mat-option *ngFor="let key of JobOfferKeys()" [value]="key">{{ JobOffers[key] }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <button (click)="addDate()" class="save-button">Save</button>
+</div>

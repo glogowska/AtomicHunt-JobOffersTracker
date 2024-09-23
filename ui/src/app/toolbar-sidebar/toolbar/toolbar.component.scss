@@ -1,0 +1,217 @@
+mat-toolbar {
+    background-color: #F8F8F8;
+    color: black;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  
+    font-size: 18px;
+    font-weight: 500;
+
+    font-family: "JetBrains Mono", monospace;
+    // align-items: center;
+    display: flex;
+
+    padding: 2px 16px;
+  }
+  
+  
+  .circle-button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    appearance: none;
+    border-radius: 50%;
+    border-width: 0;
+    //box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .circle-button span {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    padding-left: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .circle-button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .circle-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  .logo{
+    background-color: #FFEAB5;
+    margin-left:30px;
+  }
+  .sidenav-button {
+    background-color: #FFC8C8;
+    margin-left:15px;
+  }
+  
+  .status-view-button {
+    background-color: #FFEAB5;
+    margin-left: 22%;
+  }
+
+  .calendar-view-button{
+    background-color: #FFC8C8;
+    margin-left: 60px;
+  }
+
+  .tag-view-button{
+    background-color: #E8F3EB;
+    margin-left: 28px;
+  }
+
+  .tools-button{
+    background-color: #8AB7E2;
+    margin-left: -5px;
+  }
+
+.logo:hover{
+  transform: translateY(0px);
+}
+
+.logo:active {
+  box-shadow: none;
+  transform: none;
+}
+.logo:focus{
+  box-shadow: none;
+}
+
+
+.log-out-button{
+  
+  background-color: #DF6449;
+  margin-left: auto;
+  margin-right: 20px;
+
+}
+
+.logo-div{
+  position: relative;
+  margin-right: 15px;
+}
+
+.logo-div::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+.login-div{
+  position: relative;
+  margin-right: 15px;
+}
+
+.login-div::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+.log-in-button{
+  background-color: #FFC8C8;
+}
+
+.register-button{
+  background-color: #E8F3EB;
+}
+
+
+.status-view-div{
+  margin-left: 22%;
+}
+
+.status-view-div{
+  position: relative;
+  margin-right: 15px;
+}
+
+.status-view-div::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+.calendar-div{
+  position: relative;
+  margin-right: 15px;
+}
+
+.calendar-div:after{
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+.tag-view-div{
+  position: relative;
+  margin-right: 15px;
+}
+
+.tag-view-div:after{
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 40px;
+  background-color: black;
+}
+
+
+.logout-div{
+  margin-left: auto;
+}

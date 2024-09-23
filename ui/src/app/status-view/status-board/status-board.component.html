@@ -1,0 +1,28 @@
+<div class="board">
+    <div class="board-column" *ngFor="let status of statuses">
+        <div class="column-header">
+            <button class="add-offer-button marks" [ngClass]="status.toLowerCase() + '-button'" (click)="openAddEditJobOfferForm()">
+                <span><strong>+</strong></span>
+               </button>
+          <h2 class="column-title">{{ status }}</h2>
+          <h3 class="marks arrow" *ngIf="!isOffered(status)">➜</h3>
+          <h3 class="marks check-mark" *ngIf="isOffered(status)">✔</h3>
+        </div>
+  
+      <div
+        cdkDropList
+        id="{{ status }}"
+        [cdkDropListData]="items[status]"
+        [cdkDropListConnectedTo]="statuses"
+        class="example-list"
+        (cdkDropListDropped)="drop($event, status)">
+        <div class="placeholder" *ngIf="items[status]?.length === 0"></div>
+        <div class="offer-text" *ngFor="let item of items[status]" cdkDrag (click)="openJobOfferDetails(item)">
+            <h4>{{ item.position }}</h4>
+            {{item.companyName}},   {{item.location}},   {{item.mode}}
+
+        </div>
+      </div>
+    </div>
+</div>
+  

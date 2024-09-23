@@ -1,0 +1,21 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" [opened]="getIsOpened()">
+      <div class="upcoming-dates">
+        <div class="title">
+            Upcoming Events:
+        </div>
+        <div *ngFor="let item of upcomingJobOffers" class="date-card" (click)="toCalendarView()">
+            <ul>
+                <li *ngFor="let event of item.events">
+                    <p class="p-event"> {{ event }}</p>
+                </li>
+            </ul>
+          <p class="p-date">{{ item.date }}</p>
+          <p class="p-company-name">{{ item.jobOffer.companyName }}</p>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

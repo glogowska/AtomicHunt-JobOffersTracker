@@ -1,0 +1,44 @@
+<div class="dialog-container">
+<div mat-dialog-title class="title">
+    <strong>JOB OFFER DETAILS</strong>
+  </div>
+  <div mat-dialog-content>
+    <p class="p-title"><strong>POSITION:</strong> </p>
+      <p>{{ getPosition() }}</p>
+    <p class="p-title"><strong>LOCATION:</strong></p> 
+    <p>{{ getLocation() }}</p>
+    <p class="p-title"><strong>COMPANY NAME:</strong></p> 
+    <p>{{ getCompanyName() }}</p>
+    <p class="p-title"><strong>WORKING MODE:</strong></p> 
+    <p>{{ getMode() }}</p>
+    <p class="p-title"><strong>CONTACT INFO:</strong></p>
+    <p>{{ getContactInfo() }}</p>
+    <p class="p-title"><strong>CUSTOM NOTES:</strong></p>
+    <p>{{ getCustomNotes() }}</p>
+    <p class="p-title"><strong>DATES:</strong></p> 
+    <div *ngFor="let date of getDates()">
+      <p class="p-dates"><strong>{{ date.date }}</strong></p>
+      <ul>
+        <li *ngFor="let event of date.events"> <p class="p-dates">{{ event }}</p></li>
+      </ul>
+    </div>
+    <!-- <button><strong>Add Dates</strong></button> -->
+    <p class="p-title"><strong>CONTACT E-MAIL:</strong></p> 
+    <p>{{ getEmail() }}</p>
+    <p class="p-title"><strong>JOB DESCRIPTION:</strong></p> 
+    <p>{{ getJobDescription() }}</p>
+    <p class="p-title"><strong>SALARY:</strong></p> 
+    <p>{{ getSalary() }}</p>
+    <p class="p-title"><strong>STATUS:</strong></p> 
+    <p>{{ getStatus() }}</p>
+    <p class="p-title"><strong>JOB OFFER URL:</strong></p> 
+    <p><a [href]="getURL()" target="getURL()">{{ getURL() }}</a></p>
+
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button class="circle-button" (click)="editJobOffer(getData())">Edit</button>
+    <button mat-button class="circle-button" (click)="addDates(getData())">Change Dates</button>
+    <button mat-button class="circle-button delete-button" (click)="deleteJobOffer(getData()._id)">Delete</button>
+    <button mat-button class="circle-button close-button" (click)="onClose()">Close</button>
+  </div>
+</div>

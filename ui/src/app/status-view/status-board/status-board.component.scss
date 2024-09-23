@@ -1,0 +1,168 @@
+
+  .board {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-x: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .board-column {
+    flex: 1 1 22%;
+    min-width: 200px;
+    margin: 10px;
+    padding: 25px;
+    background-color: #f8f8f8;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 12px 2px rgba(66, 68, 90, 1);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .column-header{
+    display: flex;
+
+    h3{
+      margin-left: auto;
+    }
+
+    .marks{
+      font-size: 20px;
+      font-weight: bolder;
+    }
+  }
+  
+  .column-title {
+    margin-left:60px;
+    margin-bottom: 10px;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .example-list {
+    min-height: 300px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    padding: 5px;
+
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+  }
+  
+  .example-list .placeholder {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    flex-grow: 1;
+  }
+  
+  .offer-text {
+    padding: 12px 12px;
+    background-color: white;
+    border-bottom: solid 1px #ddd;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(66, 68, 90, 0.235);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(66, 68, 90, 0.235);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    h4{
+      font-weight: bold;
+    }
+  }
+
+
+  .add-offer-button {
+    padding: 19px;
+    margin-left: none;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 20px;
+    border-width: 0;
+    //box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 20px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 16px;
+
+    &.interested-button {
+      background-color: #FFEAB5;
+    }
+  
+    &.applied-button {
+      background-color: #FFC8C8;
+    }
+  
+    &.interviewed-button {
+      background-color: #E8F3EB;
+    }
+  
+    &.offered-button {
+      background-color: #8AB7E2;
+    }
+  }
+  
+  .add-offer-button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .add-offer-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+
+    &.interested-button:hover {
+      box-shadow: #FFEAB5 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #FFEAB5 0 -3px 0 inset;
+    }
+  
+    &.applied-button:hover {
+      box-shadow: #FFC8C8 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #FFC8C8 0 -3px 0 inset;
+    }
+  
+    &.interviewed-button:hover {
+      box-shadow: #E8F3EB 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #E8F3EB 0 -3px 0 inset;
+    }
+  
+    &.offered-button:hover {
+      box-shadow: #8AB7E2 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #8AB7E2 0 -3px 0 inset;
+    }
+  }
+  
+  .add-offer-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }

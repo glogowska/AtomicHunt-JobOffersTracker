@@ -1,0 +1,41 @@
+<div class="dialog-container">
+    <div mat-dialog-title class="title">
+      <strong> DATES: </strong>
+    </div>
+    <div mat-dialog-content>
+        <div *ngFor="let date of getDates(); let j = index">
+            <ul>
+                <p class="p-title">{{ date.date }}</p>
+              <div class="date-row" *ngFor="let event of date.events; let i = index">
+                <p>{{ event }}</p>
+                <button class="circle-button delete-button" (click)="deleteDateEvent(j, i)"><strong>x</strong></button>
+              </div>
+            </ul>
+          </div>
+          </div>
+          <div class="input-date">
+            <div class="form-title">
+              ADD A NEW DATE
+            </div>
+            <div class="forms">
+              <form [formGroup]="datesForm">
+              <mat-form-field appearance="outline">
+                  <mat-label>Date</mat-label>
+                  <input matInput placeholder="YYYY-MM-DD" formControlName="date">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Meeting Description</mat-label>
+                  <input matInput formControlName="event">
+                </mat-form-field>
+                <button mat-raised-button class="circle-button-check" type="button" (click)="addDate()">✔</button>
+          </form>
+            </div>
+          </div>
+    <div mat-dialog-actions class="button-close">
+      <button mat-raised-button class="circle-button-check" type="button" (click)="onClose()">Close</button>
+    </div>
+  </div>
+  
+  
+  
+  
